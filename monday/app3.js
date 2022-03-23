@@ -22,7 +22,21 @@ Ex: subtract(2); => 2 - 1 - 0 => 1
 Ex: subtract(5); => 5 - 4 - 3 - 2 - 1 - 0 => -5
 Ex: subtract(9); => 9 - 8 - 7 - 6 - 5 - 4 - 3 - 2 - 1 - 0 => -27
 */
+function subtract (x)
+{
+    let y =0 ;
+    let sum = x; 
+    while ( y <= x)
+    {
+        x = x -1 ;
+        sum = sum - x;
+        
+        
+        y++;
 
+    }
+    return sum ; 
+}
 
 /*
 2

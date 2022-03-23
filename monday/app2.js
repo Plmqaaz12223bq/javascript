@@ -116,7 +116,11 @@ accept 1 parameter and calculate the cube of this number
 Ex: cube(4)
 => 64
 */
-
+function cubee (x)
+{
+    let y = x * x * x ;
+ return  y;
+}
 
 /*
 8
@@ -128,7 +132,10 @@ Ex: multiply(3,4)
 Ex: multiply(5,4)
 => 20
 */
-
+function multiplie (x ,y )
+{ 
+ return  x * y;
+}
 
 /*
 9
@@ -147,7 +154,20 @@ Ex: canIGetADrivingLicense(20)
 => "yes you can"
 
 */
+function canIGetADrivingLicense (x)
+{
+    let y = 20-x;
+if (x >= 20)
+{
+ 
+ return "yes you can" ;
+}
+else
+{ 
+ return "please come back after " + y + " years to get one" ;
+}
 
+}
 
 /*
 10
@@ -163,7 +183,19 @@ Ex: sameLength("tree","clue")
 Ex: sameLength("tree","car")
 => false
 */
-
+function sameLength (x ,y)
+{
+     
+      
+     if ( x.length == y.length )
+     {
+         return "True";
+     }
+     else 
+     {
+         return "False";
+     }
+}
 /*
 11
 Write a function called largerNubmer
@@ -177,7 +209,21 @@ Ex: largerNubmer(5,3)
 => 5
 */
 
-
+function largerNubmer (x ,y )
+{
+    if (x > y)
+    {
+        return x;
+    }
+    else if (y > x)
+    {
+ return y;
+    }
+    else 
+    { 
+        return "they are equal" ;
+    }
+}
 /*
 12
 Write a function called smallerNubmer
@@ -197,7 +243,22 @@ Ex: smallerNubmer(5,3,3)
 => 3
 
 */
+function smallerNubmer (x , y , z)
+{
+    if (x < y || x < z)
+    {
+        return x;
+    }
+    else if (y < x || y < z)
+    {
+        return y;
 
+    }
+    else 
+    {
+        return z;
+    }
+}
 /*
 13
 Write a function called shorterString
@@ -223,7 +284,20 @@ Ex: shorterString("air","tr","car","github","by")
 => by
 
 */
+function shorterString (a , b ,c ,d ,e)
+{
+    let x = [a , b, c , d, e]
+    let y = x[0];
+    for(let m = 0 ; i < x.length ; m++)
+    {
+        if (x[m]< y)
+        {
+            y = x[m];
+        }
 
+    }
+    return y;
+}
 /*
 14
 Write a function called longerString
@@ -238,7 +312,20 @@ Ex: longerString("air","schoo","car","github")
 
 try all the cases (change the order of the longestString)
 */
+function longerString (a , b ,c ,d)
+{
+    let x = [a , b, c , d]
+    let y = x[0];
+    for(let m = 0 ; i < x.length ; m++)
+    {
+        if (x[m]>y)
+        {
+            y = x[m]
+        }
 
+    }
+    return y;
+}
 /*
 15
 Write a function called isEven
@@ -252,7 +339,17 @@ Ex: isEven(2)
 => true
 
 */
-
+function isEven (x)
+{
+    if (x%2 == 0)
+    {
+        return "true";
+    }
+    else
+    {
+        return "false";
+    }
+}
 
 /*
 16
@@ -267,7 +364,17 @@ Ex: isOdd(5)
 => true
 
 */
-
+function isodd (x)
+{
+    if (x%2 == 0)
+    {
+        return "false";
+    }
+    else
+    {
+        return "true";
+    }
+}
 
 /*
 17
@@ -281,7 +388,19 @@ Ex: positive(-5)
 => 5
 
 */
+function positive (x)
+{
+    if(x <0)
+    {
+        x = x + (x*2);
 
+    }
+    else
+    {
+        return x ;
+    }
+
+}
 
 /*
 18
