@@ -20,8 +20,10 @@ if (avg<60) {
             if (avg<90) {
                 console.log("B");
             } else {
+                if (avg<100){
                 console.log("A");  
             }  
         }
     }   
+}
 }
