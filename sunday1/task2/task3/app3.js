@@ -1,33 +1,21 @@
-let m1=prompt("pick one (-,*,+,/)");
-let m2=prompt("first num");
-let m3=prompt("second num");
+let operation = prompt("Enter an operation sign (+, -, *, /): ");
+let num1 = prompt("Enter first number:");
+let num2 = prompt("Enter second number:");
 
+let number1 = Number(num1);
+let number2 = Number(num2);
 
-let m_2=Number(m2);
-let m_3=Number(m3);
-
-if(m2+m3){
-     console.log(m_2+m_3);    
+switch (operation) {
+    case "+": let Addition = number1 + number2 ;
+            console.log(Addition)
+            break;
+    case "-": let Subtraction = number1 - number2 ;
+            console.log(Subtraction)
+            break;
+    case "*": let Multiblication = number1 * number2 ;
+            console.log(Multiblication)
+            break;
+    case "/": let Division = number1 / number2 ;
+            console.log(Division)
+            break;
 }
-else{
-    console.log("nothing to print");
-}
-
-if (m_2-m_3){
-console.log(m_2-m_3);
-}
-else{
-    console.log("nothing to print");
-} 
-if (m_2*m_3){
-console.log(m_2*m_3);
-}
-else{
-    console.log("nothing to print");
-} 
-if (m_2/m_3){
-console.log(m_2/m_3);
-}
-else{
-    console.log("nothing to print");
-} 
