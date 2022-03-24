@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task5</title>
+</head>
+<body>
+    <form name="pw">
+        <table>
+            <tr>
+                <td>Password (min 6 characters):</td>
+                <td><input type="password" name="password1" id="password1" size="10" placeholder="Password" onkeyup="checkPasswords()"></td>
+                <td>
+                    <div id="pw1_check" class="err"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Repeat password:</td>
+                <td><input type="password" name="password2" id="password2" size="10" placeholder="Password" onkeyup="checkPasswords()"></td>
+                <td>
+                    <div id="pw2_check" class="err"></div>
+                </td>
+            </tr>
+        </table>
+    
+        <input type="submit" value="Submit" id="submitBtn"/>
+    </form>
+    <script src="app5.js"></script>
+    
+</body>
+</html>
