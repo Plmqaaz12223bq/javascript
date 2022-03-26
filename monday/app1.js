@@ -12,6 +12,8 @@ Correct the syntax error
 ['the’, ‘fox', 'over', lazy, 'dog'  ]
 
 */
+let x = [1, 7, 9, 45];
+let y = ["Str", "alex", "moh", 'the', 'fox', 'over', "lazy", 'dog'];
 
 
 /*
@@ -310,7 +312,27 @@ Ex: oddArray(nums) => [1,3,9]
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
-
+function oddArray(array) {
+    let result = [];
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] % 2 === 1) {
+        result.push(array[i]);
+      }
+    }
+    return result;
+  }
+  
+  function oddArray2(array) {
+    let result = [];
+    let i = 0;
+    while (i < array.length) {
+      if (array[i] % 2 === 1) {
+        result.push(array[i]);
+      }
+      i++;
+    }
+    return result;
+  }
 
 /*
 17
@@ -327,7 +349,23 @@ Ex: aveArray(nums) => 16.6
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
-
+function aveArray(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+      sum = sum + array[i];
+    }
+    return sum / array.length;
+  }
+  
+  function aveArray2(array) {
+    let sum = 0;
+    let i = 0;
+    while (i < array.length) {
+      sum = sum + array[i];
+      i++;
+    }
+    return sum / array.length;
+  }
 
 /*
 18
@@ -342,6 +380,27 @@ Ex: shorterInArray(strings) => "alex"
 **try more cases by your self
 */
 
+function shorterInArray(array) {
+    let shortest = array[0];
+    for (let i = 0; i < array.length; i++) {
+      if (array[i].length < shortest.length) {
+        shortest = array[i];
+      }
+    }
+    return shortest;
+  }
+  
+  function shorterInArray2(array) {
+    let shortest = array[0];
+    let i = 0;
+    while (i < array.length) {
+      if (array[i].length < shortest.length) {
+        shortest = array[i];
+      }
+      i++;
+    }
+    return shortest;
+  }
 
 /*
 19
@@ -356,7 +415,27 @@ Ex: repeatChar(string,"z") => 0
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
-
+function repeatChar(str, chr) {
+    let result = 0;
+    for (var i = 0; i < str.length; i++) {
+      if (str[i].toLowerCase() === chr.toLowerCase()) {
+        result++;
+      }
+    }
+    return result;
+  }
+  
+  function repeatChar2(str, chr) {
+    let result = 0;
+    let i = 0;
+    while (i < str.length) {
+      if (str[i].toLowerCase() === chr.toLowerCase()) {
+        result++;
+      }
+      i++;
+    }
+    return result;
+  }
 
 /*
 20
@@ -371,12 +450,28 @@ Ex: evenIndexOddLength(strings) => ["madrasa"]
 **try more cases by your self
 */
 
-
+function evenIndexOddLength(array) {
+    let result = [];
+    for (let i = 0; i < array.length; i = i + 2) {
+      if (array[i].length % 2 === 1) {
+        result.push(array[i])
+      }
+    }
+    return arr;
+  }
+  
+  function evenIndexOddLength2(array) {
+    let result = [];
+    let i = 0;
+    while (i < array.length) {
+      if (array[i].length % 2 === 1) {
+        result.push(array[i])
+      }
+      i = i + 2;
+    }
+    return result;
+  }
 /*
-
-
-
-
 
 21
 Create a function called powerElementIndex
@@ -389,7 +484,23 @@ Ex: powerElementIndex(nums) => [0, 5, 16, 27, 16, 100000]
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
-
+function powerElementIndex(array) {
+    let result = [];
+    for (let i = 0; i < array.length; i++) {
+      result[i] = array[i] ** i;
+    }
+    return result;
+  }
+  
+  function powerElementIndex2(array) {
+    let result = [];
+    let i = 0;
+    while (i < array.length) {
+      result[i] = array[i] ** i;
+      i++;
+    }
+    return result;
+  }
 
 /*
 22
@@ -403,3 +514,24 @@ Ex: evenNumberEvenIndex(nums) => [2,8,34]
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+function evenNumberEvenIndex(array) {
+    let result = [];
+    for (let i = 0; i < array.length; i = i + 2) {
+      if (array[i] % 2 === 0) {
+        result.push(array[i]);
+      }
+    }
+    return result;
+  }
+  
+  function evenNumberEvenIndex2(array) {
+    let result = [];
+    let i = 0;
+    while (i < array.length) {
+      if (array[i] % 2 === 0) {
+        result.push(array[i]);
+      }
+      i = i + 2;
+    }
+    return result;
+  }

@@ -22,21 +22,16 @@ Ex: subtract(2); => 2 - 1 - 0 => 1
 Ex: subtract(5); => 5 - 4 - 3 - 2 - 1 - 0 => -5
 Ex: subtract(9); => 9 - 8 - 7 - 6 - 5 - 4 - 3 - 2 - 1 - 0 => -27
 */
-function subtract (x)
-{
-    let y =0 ;
-    let sum = x; 
-    while ( y <= x)
-    {
-        x = x -1 ;
-        sum = sum - x;
-        
-        
-        y++;
-
+function subtract(n) {
+    let result = n;
+    while (n > 0) {
+      n -= 1;
+      result = result - n;
     }
-    return sum ; 
-}
+    return result;
+  }
+  
+  
 
 /*
 2
@@ -46,6 +41,14 @@ and return the product of all integers up to n starting from 1
 Ex: factorial(2); => 2 * 1 => 2
 Ex: factorial(4); => 4 * 3 * 2 * 1 => 24
 */
+function factorial(n) {
+   let result = 1;
+    while (n >= 1) {
+      result = result * n;
+      n--;
+    }
+    return result;
+  }
 
 
 /*
@@ -59,7 +62,16 @@ Important: the continue condition should be [somthing !== 0]
 Ex: repeatStr("to",2); => "to to"
 Ex: repeatStr("to",4); => "to to to to"
 */
-
+function repeatStr(str, n) {
+    let result = "";
+    while (n !== 0) {
+      result = result + str + " ";
+  
+      n -= 1;
+    }
+    return result.slice(0, result.length - 1);
+  }
+  
 
 /*
 4
@@ -69,6 +81,14 @@ and will return the sumation from the first number to the second number
 Ex: sum2(4, 5); => 4 + 5 => 9
 Ex: sum2(3, 6); => 3 + 4 + 5 + 6 => 18
 */
+function sum2(n1, n2) {
+    let result = 0;
+    while (n1 <= n2) {
+      result = result + n1;
+      n1 += 1;
+    }
+    return result;
+  }
 
 
 /*
@@ -82,7 +102,14 @@ and return the first string number time
 Ex: repeatStr2("ro","cc"); => "ro ro"
 Ex: repeatStr2("ro","fff"); => "ro ro ro"
 */
-
+function repeatStr2(str1, str2) {
+    let result = "";
+    while (str2.length > 0) {
+      result = result + str1 + " ";
+      str2 = str2.slice(1, str2.length)
+    }
+    return result.slice(0, result.length - 1);
+  }
 
 /*
 6
@@ -95,7 +122,14 @@ Ex: multiOf(4,10,3); => 4000
 Ex: multiOf(6,3,2); => 54
 Ex: multiOf(6,2,3); => 48
 */
-
+function multiOf(num1, num2, num3) {
+    let result = num1;
+    while (num3 > 0) {
+      result = result * num2;
+      num3 -= 1;
+    }
+    return result;
+  }
 
 /*
 7
@@ -106,7 +140,14 @@ from the first number to the second number
 Ex: muti2(4, 5); => 4 * 5 => 20
 Ex: muti2(3, 6); => 3 * 4 * 5 * 6 => 360
 */
-
+function muti2(num1, num2) {
+    let result = num2;
+    while (num1 < num2) {
+      result = result * num1;
+      num1 += 1;
+    }
+    return result;
+  }
 
 /*
 8
@@ -119,7 +160,15 @@ and return the number between them
 numberBetweenUs(2,8) => "3, 4, 5, 6, 7"
 numberBetweenUs(1,3) => "2"
 */
-
+function numberBetweenUs(num1, num2) {
+    let result = "";
+    num1 += 1
+    while (num1 !== num2 - 1) {
+      result = result + num1 + ", ";
+      num1 += 1;
+    }
+    return result + num1;
+  }
 
 /*
 9
@@ -138,6 +187,14 @@ countDown(2)
 countDown(7)
 => "7, 6, 5, 4, 3, 2, 1, done"
 */
+function countDown(n) {
+    let result = "";
+    while (n > 0) {
+      result = result + n + ", ";
+      n--;
+    }
+    return result + "done";
+  }
 
 /*
 10
@@ -149,7 +206,14 @@ multiplication2(5,4) => 20
 multiplication2(2,8) => 16
 multiplication2(7,6) =>  42
 */
-
+function multiplication2(num1, num2) {
+    let result = 0;
+    while (num2 > 0) {
+      result = result + num1;
+      num2 -= 1;
+    }
+    return result;
+  }
 /*
 11
 Write a function called mod2
@@ -161,7 +225,12 @@ mod2(2,8) => 2
 mod2(7,4) => 3
 mod2(8,4) => 0
 */
-
+function mod2(num1, num2) {
+    while (num1 > num2 || num1 === num2) {
+      num1 = num1 - num2;
+    }
+    return num1;
+  }
 
 /*
 12
@@ -177,16 +246,16 @@ repeatChar("school","a") => 0
 repeatChar("School","s") => 1
 try more case by yourself
 */
-
-
-
-
-
-
-
-
-
-
+function repeatChar(str1, str2) {
+    let count = 0;
+    while (str1.length !== 0) {
+      if (str1[0].toUpperCase() === str2.toUpperCase()) {
+        count++;
+      }
+      str1 = str1.slice(1, str1.length);
+    }
+    return count;
+  }
 
 
 // Advanced Part {for your benefits}
@@ -213,7 +282,12 @@ fibon(n): 1 1 2 3 5 8 13 21
          | | | | | |  |  |
 n:        0 1 2 3 4 5  6  7
 */
-
+function fibon(num) {
+    if (num === 1 || num === 0) {
+      return 1;
+    }
+    return fibon(num - 1) + fibon(num - 2);
+  }
 
 /*
 2

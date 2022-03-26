@@ -9,10 +9,14 @@ outputs your fortune to the screen like so:
 Ex: tellFortune('software engineer', 'Jordan', 'Alice', 3);
 => "You will be a software engineer in Jordan, and married to Alice with 3 kids."
 */
-function tellFortune (num,name,loc,job)
-{
- return "You will be "+ job + "in " + loc + ", and married to " + name + " and have " + num + " kids";
-} 
+function tellFortune(jobTitle, geoLocation, partner, numKids) {
+    let future = 'You will be a ' + jobTitle + ' in ' + geoLocation + ' and married to ' +
+      partner + ' ' + ' with ' + numKids + ' kids.';
+    console.log(future);
+  }
+  tellFortune('Doctor', 'spain', 'Roze', 3);
+  tellFortune('Engineer', 'korea', 'selena', 2);
+  tellFortune('law', 'Russia', 'camila', 1);
 
 /*
 2
@@ -26,11 +30,11 @@ outputs the result to the screen like so:
 Ex: calculateDogAge(1);
 => "Your doggie is 7 years old in dog years!"
 */
-function calculateDogAge (x)
-{
-    let dog_age = x * 7 ; 
-    return "Your doggie is " + dog_age + " years old in dog years!";
-}
+function calculateDogAge(age) {
+    let dogYears = 7 * age;
+    return "Your doggie is " + dogYears + " years old in dog years!";
+  }
+  
 
 /*
 3
@@ -43,21 +47,14 @@ outputs the result to the screen like so:
 Ex: calculateSupply(30, 3);
 => 'You will need 76650 cups of tea to last you until the ripe old age of 100;
 */
-function calculateSupply (x , y)
-{
-    let food = 0 ; 
-    do
-    {
-        x++; 
-        food = food + y*365;
 
-    }
-    while (x < 100);
-    
-    return food;
-        
-    
-}
+function calculateSupply(age, numPerDay) {
+    let maxAge = 100;
+    let totalNeeded = (numPerDay * 365) * (maxAge - age);
+    let message = 'You will need ' + totalNeeded + ' cups of tea to last you until the ripe old age of ' + maxAge;
+    return message;
+  }
+  
 
 /*
 4
@@ -68,10 +65,9 @@ and it will return hello + name
 Ex: greet("Adam")
 => "Hello Adam"
 */
-function greet (x)
-{
-    return "Hello " + x;
-}
+function greet(name) {
+    return "Hello " + name ;
+  }
 
 /*
 5
@@ -106,7 +102,9 @@ function (x) double3 {
   return 2 * x;
 
 */
-
+function double3(x) {
+    return 2 * x;
+  }
 
 /*
 7
@@ -116,11 +114,9 @@ accept 1 parameter and calculate the cube of this number
 Ex: cube(4)
 => 64
 */
-function cubee (x)
-{
-    let y = x * x * x ;
- return  y;
-}
+function cube(x) {
+    return x * x * x;
+  }
 
 /*
 8
@@ -154,20 +150,13 @@ Ex: canIGetADrivingLicense(20)
 => "yes you can"
 
 */
-function canIGetADrivingLicense (x)
-{
-    let y = 20-x;
-if (x >= 20)
-{
- 
- return "yes you can" ;
-}
-else
-{ 
- return "please come back after " + y + " years to get one" ;
-}
-
-}
+function canIGetADrivingLicense(age) {
+    if (age >= 20) {
+      return "yes you can";
+    }
+    return "please come back after" + (20 - age) + "years to get one";
+  }
+  
 
 /*
 10
@@ -183,19 +172,12 @@ Ex: sameLength("tree","clue")
 Ex: sameLength("tree","car")
 => false
 */
-function sameLength (x ,y)
-{
-     
-      
-     if ( x.length == y.length )
-     {
-         return "True";
-     }
-     else 
-     {
-         return "False";
-     }
-}
+function sameLength(string1, string2) {
+    if (string1.length === string2.length) {
+      return true;
+    }
+    return false;
+  }
 /*
 11
 Write a function called largerNubmer
@@ -414,7 +396,8 @@ Ex: fullName("Adam","McCallen")
 Ex: fullName("Alex", "Mercer")
 => "Alex Mercer"
 */
-
+function fullName(firstName, lastName) {
+    return firstName + ' ' + lastName;
 
 /*
 19
@@ -430,7 +413,9 @@ Ex: average(5,7,9,3,5)
 
 */
 
-
+function average (num1, num2, num3, num4, num5) {
+    return (num1 + num2 + num3 + num4 + num5) / 5;
+  }
 /*
 20
 Write a function called randomNumber
@@ -445,7 +430,9 @@ Ex: randomNumber()
 => 0.475
 
 */
-
+function randomNumber() {
+    return Math.random();
+  }
 /*
 21
 Write a function called randomBetweenNumbers
@@ -460,7 +447,9 @@ Ex: randomBetweenNumbers(3,100)
 => 23
 
 */
-
+function randomBetweenNumbers(num1, num2) {
+    return Math.floor(Math.random() * (num2 - num1)) + num1
+  }
 
 /*
 22
@@ -483,7 +472,20 @@ Ex: scoreInUniversty(71)
 => "C"
 */
 
-
+function socreInUniversity(score) {
+    if (score >= 90 && score < 100)
+      return 'A';
+    if (score >= 80 && score < 90)
+      return 'B';
+    if (score >= 70 && score < 80)
+      return 'C';
+    if (score >= 60 && score < 70)
+      return 'D';
+    if (score >= 50 && score < 60)
+      return 'E';
+    if (score < 50)
+      return 'F';
+  }
 /*
 23
 Write a function called counter
@@ -501,8 +503,10 @@ Ex: counter()
 => 3
 
 */
-
-
+let count = 0
+function counter() {
+  return ++count;
+}
 /*
 24
 Write a function called resetCounter
@@ -534,4 +538,8 @@ Ex: resetCounter()
 Ex: counter()
 => 1
 */
-
+function resetCounter() {
+    let oldCounter = count
+    count = 0;
+    return oldCounter + " and the count reset now";
+}
