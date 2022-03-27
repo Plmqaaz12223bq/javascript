@@ -14,7 +14,13 @@ ferEach :/*
 */
 function doubleValues(arr){
    //Your Code Here
+let newArr = [];
+arr.forEach(function(value) {
+    newArr.push(value * 2);
+});
+return newArr;
 }
+
 
 /*
 * Exercise 2:
@@ -30,7 +36,14 @@ function doubleValues(arr){
 */
 function onlyEvenValues(arr){
     //Your Code Here
-    
+    let newArr = [];
+    arr.forEach(function(value) {
+        if(value % 2 === 0){
+            newArr.push(value);
+        }
+    });
+    return newArr;
+
 }
 
 /*
@@ -48,6 +61,14 @@ function onlyEvenValues(arr){
 */
 function showFirstAndLast(arr){
    //Your Code Here
+   let newArr = [];
+   arr.forEach(function(value) {
+       if(typeof value === "string"){
+           newArr.push(value[0] + value[value.length-1]);
+       }
+   });
+   return newArr;
+
 }
 
 /*
@@ -64,6 +85,11 @@ function showFirstAndLast(arr){
 */
 function addKeyAndValue(arr,key,value){
     //Your Code Here
+    arr.forEach(function(val){
+      val[key] = value;
+  });
+  return arr;
+
 }
 
 /*
@@ -89,4 +115,18 @@ function addKeyAndValue(arr,key,value){
 
 function vowelCount(str){
   //Your Code Here
+  let splitArr = str.toLowerCase().split("");
+  let obj = {};
+  let vowels = "aeiou";
+
+  splitArr.forEach(function(letter){
+      if(vowels.indexOf(letter) == -1){
+          if(obj[letter]){
+              obj[letter]++;
+          } else{
+              obj[letter] = 1;
+          }
+      }
+  });
+  return obj;
 }

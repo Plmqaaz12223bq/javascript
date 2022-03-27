@@ -398,7 +398,7 @@ Ex: fullName("Alex", "Mercer")
 */
 function fullName(firstName, lastName) {
     return firstName + ' ' + lastName;
-
+}
 /*
 19
 Write a function called average
