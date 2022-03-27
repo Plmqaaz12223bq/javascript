@@ -5,18 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>task3</title>
+    <style>
+          #image{
+            width: 500px;
+            height: 300px;
+            margin: 30px;
+        }
+    </style>
 </head>
 <body>
-    <form name="form">
-        <select name="country" id="country" onchange="changeImage();">
-            <option value="no_image.png">Select</option>
-            <option value="flag_NO.png">Norway</option>
-            <option value="flag_SE.png">Sweden</option>
-            <option value="flag_DK.png">Denmark</option>
-            <option value="flag_IL.png">Iceland</option>
+    <div class="parent">
+        <select id="flags" onchange="fun1()">
+            <option>select</option>
+            <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1280px-Flag_of_South_Korea.svg.png" name="korea Flag">korea</option>
+
+            <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Sweden.svg/2560px-Flag_of_Sweden.svg.png" name="sweden Flag">sweden</option>
+
+            <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/1280px-Flag_of_Denmark.svg.png" name="denmark Flag">denmark</option>
+
+            <option value="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg" name="canada Flag">canada</option>
+
         </select>
-    </form>
-    <img id="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/280px-Flag_of_Norway.svg.png" style="border: 1px solid black" alt="No image selected"/>
+        <br>
+    <img  id="image">
+
+    </div>
     <script src="app3.js"></script>
 </body>
 </html>

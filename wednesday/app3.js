@@ -1,6 +1,6 @@
-function changeImage() {
-    let s = document.getElementById("country");
-    let img = document.getElementById("img");
-    img.src = "images/" + s.options[s.selectedIndex].value;
-    img.alt = s.options[s.selectedIndex].text;
+function fun1(){
+    let x = document.getElementById("flags").value;
+    let y = document.getElementById("flags").name;
+    document.getElementById("image").src = x;
+    document.getElementById("image").alt = y;
 }
