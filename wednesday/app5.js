@@ -1,8 +1,8 @@
 function checkPasswords() {
-    var pw1 = document.getElementById("password1").value;
-    var pw2 = document.getElementById("password2").value;
-    var pw1check = document.getElementById("pw1_check");
-    var pw2check = document.getElementById("pw2_check");
+    let pw1 = document.getElementById("password1").value;
+    let pw2 = document.getElementById("password2").value;
+    let pw1check = document.getElementById("pw1_check");
+    let pw2check = document.getElementById("pw2_check");
 
     let isError = false;
     if (pw1.length > 0) {
