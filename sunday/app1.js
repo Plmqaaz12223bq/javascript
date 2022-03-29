@@ -44,22 +44,22 @@ formDiv.addEventListener("submit",handleSubmit);
  handleSubmit();
  function renderType() {
     let trElement = document.createElement("tr");
-    let tdElement4 = document.createElement("td");
     let tdElement1 = document.createElement("td");
     let tdElement2 = document.createElement("td");
     let tdElement3 = document.createElement("td");
+    let tdElement4 = document.createElement("td");
   
     for (let i = 0; i < userfor.length; i++) {
       tbElement.appendChild(trElement);
-      trElement.appendChild(tdElement4);
       trElement.appendChild(tdElement1);
       trElement.appendChild(tdElement2);
       trElement.appendChild(tdElement3);
+      trElement.appendChild(tdElement4);
   
-      tdElement4.textContent = userfor[i].useName;
-      tdElement1.textContent = userfor[i].typeNameD;
-      tdElement2.textContent = userfor[i].price;
-      tdElement3.textContent = userfor[i].cond;
+      tdElement1.textContent = userfor[i].useName;
+      tdElement2.textContent = userfor[i].typeNameD;
+      tdElement3.textContent = userfor[i].price;
+      tdElement4.textContent = userfor[i].cond;
     }
 }
 

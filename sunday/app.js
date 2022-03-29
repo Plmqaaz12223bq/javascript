@@ -1,7 +1,7 @@
 "use strict";
 let formOrder = document.getElementById("orderForm");
 let ulItem = document.getElementById("order");
-let banana = []; ///1
+let banana = [];
 
 function storeInLocalStorage(){
     let stringArray=JSON.stringify(banana);
