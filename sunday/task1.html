@@ -6,65 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>task1</title>
     <style>
-      *{
-    box-sizing: border-box;
+     body{margin: 0;
+    font-family:'Times New Roman', Times, serif;
+    font-size: larger;
+    background-color: pink;
 }
 
-div{
-    display:inline-block;
+.container {width:80%;
+    margin: 30px auto;
 }
-#divForm,form,fieldset{
-width:150%;
-}
-table{
-float: right;
-width: 30%;
-position: absolute;
-top: 5%;
-right: 5%;
-}
-td{
-    border: 2px solid black;
-    font-size: large;
-}
-body{
-  background-color: rgb(150, 150, 248);
+fieldset {border-color:black;}
+
+table{border:1px solid;
+    margin: 30px auto;
 }
 
-    </style>
+th {border: 1px solid;
+    background-color: gray;
+    padding: 10px;
+}
+td {border: 1px solid;
+    padding: 10px;
+}
+      </style>
 </head>
 <body>
-    <section class="contaner">
+  <nav>
+    
+    <i class="fa-solid fa-mobile-screen"></i>
+</nav>
+<section class="container">
+<div class="divForm">
+    <form action="" id="mobForm">
+        <fieldset>
+        <legend>Mobile Form</legend>
+        <label for="" id="userName">Name</label>
+        <br><input type="text" name="useName" id="client">
+        <br><br>
+        <label for="" id="devisType">Type</label>
+        <br>
+        <select name="typeNameD" id="typeName">
+            <option value="samsung">samsung</option>
+            <option value="apple">apple</option>
+            <option value="Huawi">Huawi</option>
+        </select>
+        <br><br>
+        <input type="button" id="btn" value="add device"></button> 
+        </fieldset>
+    </form>
+</div>
+<div class="divTable">
+    <table id="tableCon">
+        <thead id="headTa">
+            <tr>
+                <th>Client Name</th>
+                <th>Phone Type</th>
+                <th>Phone Price</th>
+                <th>Phone Condition</th>
+            </tr>
+        </thead>
+        <tbody id="boadTa"></tbody>
+        <tfoot id="footTa"></tfoot>
+    </table>
 
-        <div class="divForm">
-            <form action="" id="mobForm">
-              <fieldset>
-                <legend>Mobile Form</legend>
-              <label for="" id="userName">Name</label>
-              <br><input type="text" name="useName">
-              <br><br>
-              <label for="" id="devisType">Type</label>
-              <br>
-              <select name="typeNameD" id="typeName">
-                <option value="samsung">samsung</option>
-                <option value="apple">apple</option>
-                <option value="Huawi">Huawi</option>
-         </select>
-         <br><br>
-         <button type="submit">add device</button> 
-         </fieldset>
-          </form>
-        </div>
-        <div class="divTable">
-          <table id="tableCon">
-            <thead id="headTa"></thead>
-            <tbody id="boadTa"></tbody>
-            <tfoot id="footTa"></tfoot>
-          </table>
-  
-        </div>
-    </section>
-      
+</div>
+</section>
       <script src="app1.js"></script>
 </body>
 </html>
