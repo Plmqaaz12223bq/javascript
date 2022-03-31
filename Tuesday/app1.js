@@ -15,7 +15,7 @@ function getvalue(loccation)
 
 async function outputlocation(x)
 {
-    let respone = await fetch('https://eu1.locationiq.com/v1/search.php?key=pk.bce4efd55c2fee98ea758880f0582c8b&q=${x}&format=json')
+    let respone = await fetch('https://eu1.locationiq.com/v1/search.php?key=pk.bce4efd55c2fee98ea758880f0582c8b&q=Amman&format=json')
     let data = await respone.json()
    
    
